@@ -3,6 +3,29 @@
     padding-bottom: 20px;
 }
 
+#background:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    opacity: 0.3;
+    background-image: url("Images/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.foreground {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 1;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -21,4 +44,100 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+/* ########### Fonts ############ */
+
+@font-face {
+    font-family: Druchilla;
+    src: url('Fonts/Druchilla.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: horatiob;
+    src: url('Fonts/horatiob.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: horatiom;
+    src: url('Fonts/horatiom.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: horatiol;
+    src: url('Fonts/horatiol.ttf') format('truetype');
+}
+
+.font-druchilla {
+    font-family: Druchilla;
+}
+
+.font-horatio-bold {
+    font-family: horatiob;
+}
+
+.font-horatio-medium {
+    font-family: horatiom;
+}
+
+.font-horatio-light {
+    font-family: horatiol;
+}
+
+.f-druchilla-title {
+    font-size: 820%;
+}
+
+.font-large {
+    font-size: large;
+}
+
+.font-xlarge {
+    font-size: x-large;
+}
+
+.font-xxlarge {
+    font-size: xx-large;
+}
+
+/* ############ Overrides ############## */
+
+.navbar-inverse {
+    background-color: #FFF; 
+    border-color: #FFF; 
+}
+
+.btn-default-invert {
+    color: #ffffff;
+    background-color: #333333;
+    border-color: #cccccc;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        float: none;
+    }
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #000;
+    font-family: horatiom;
+    font-size: large;
+    /*text-shadow: 1px 1px 2px rgba(100, 150, 240, 1); // #6495ED;*/
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, 
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #000; 
+    /*background-color: transparent;*/
+    background-color: rgba(100, 150, 240, 0.1);
+}
+
+/*  ###### Places ######*/
+
+#map {
+    height: 350px;
+    width: 100%;
+    border: 5px solid transparent;
+    box-shadow: 0px 0px 20px 10px rgba(100, 150, 240, 0.5);
 }

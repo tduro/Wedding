@@ -1,0 +1,41 @@
+﻿
+<div id="background">
+    <div class="foreground text-center">
+        <br /><br />
+        <div class="col-md-1"></div>
+        <div class="col-md-5 align-middle">
+            <div class="img">
+                <br /><br /><br />
+                <img src="~/Content/Images/church.png" height="64" width="64" />
+                <br /><br />
+                <p class="font-horatio-medium font-large">Igreja de Santa Maria</p>
+                <p class="font-horatio-medium font-large">Castelo de Sesimbra</p>
+                <br /><br />
+                <span class="glyphicon glyphicon-time font-xlarge"></span>
+                <br /><br />
+                <p class="font-horatio-medium font-large">&emsp;10:30 (GMT+0)</p>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <br /><br />
+            <div id="map"></div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function initMap() {
+        var church = { lat: 38.4514, lng: -9.10775};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: church
+        });
+        var marker = new google.maps.Marker({
+            position: church,
+            map: map
+        });
+      }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-34SBb74zAXIcJddqEn0kCp30j62LMWM&callback=initMap" async defer>
+</script>
